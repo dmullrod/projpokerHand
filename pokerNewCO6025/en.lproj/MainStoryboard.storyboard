@@ -1,23 +1,325 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Dwmullan View Controller - Poker Game-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" customClass="dwmullanViewController" sceneMemberID="viewController">
+                <viewController title="Poker Game" id="2" customClass="dwmullanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K13-0L-TAa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="3XH-TF-Qlu"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="5 Cards"/>
+                                    <segment title="7 Cards"/>
+                                </segments>
+                                <connections>
+                                    <action selector="fivesevenSeg:" destination="2" eventType="valueChanged" id="VTw-Rv-LgG"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="diD-ec-CFX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="755" id="vWc-fH-X8p"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Ace"/>
+                                    <segment title="Two"/>
+                                    <segment title="Three"/>
+                                    <segment title="Four"/>
+                                    <segment title="Five"/>
+                                    <segment title="Six"/>
+                                    <segment title="Seven"/>
+                                    <segment title="Eight"/>
+                                    <segment title="Nine"/>
+                                    <segment title="Ten"/>
+                                    <segment title="Jack"/>
+                                    <segment title="Queen"/>
+                                    <segment title="King"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5np-IB-K8f">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="bP2-OB-Oro"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Hearts"/>
+                                    <segment title="Diamonds"/>
+                                    <segment title="Spades"/>
+                                    <segment title="Clubs"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh2-mc-oeb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Mah-qP-wBg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="addcard">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="temp:" destination="2" eventType="touchUpInside" id="c2i-4J-DGY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU0-8Q-Yjd">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="AZr-JB-cWt"/>
+                                    <constraint firstAttribute="height" constant="40" id="vdb-di-bHX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dao-rL-bcM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="6tI-mu-edR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7b-3c-lPv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="YtR-sx-ZxA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0W-yz-GYE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="pGu-ET-5MH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqU-2v-LuA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="1WD-bY-x4r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3uN-Hi-dw5">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="VfL-R2-tLz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyW-aJ-jBk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="fan-p0-PiD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyu-Fd-BBf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="gBr-py-CYg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOS-y0-aAO">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="jN1-Gr-iCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf1-Ux-lcu">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="kzE-50-Erd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edb-tL-Gob">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="Zdq-8D-z2f"/>
+                                    <constraint firstAttribute="height" constant="40" id="tNe-Qp-ddW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-mQ-aPS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="FQm-gp-Jcc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Eight of Diamonds" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-jh-EqY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="dEi-lY-kGf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="card 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTQ-mC-32G">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="RlE-c5-rw3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xsu-3j-mZz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="LSf-ec-2VJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCC-RZ-lF9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="gnH-BI-5yh"/>
+                                    <constraint firstAttribute="height" constant="46" id="wkX-lA-8RH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e39-Ye-Drv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="HSw-s6-JBC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButton:" destination="2" eventType="touchUpInside" id="zRf-Lf-Fnp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.8278683850364964" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uk9-jh-EqY" firstAttribute="top" secondItem="zTQ-mC-32G" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="04X-Y1-Yz1"/>
+                            <constraint firstItem="SxB-mQ-aPS" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="281" id="1MI-Nb-Qsb"/>
+                            <constraint firstItem="dao-rL-bcM" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="55" id="5Ey-Q0-Rbt"/>
+                            <constraint firstItem="sqU-2v-LuA" firstAttribute="leading" secondItem="j0W-yz-GYE" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="5yT-XQ-miQ"/>
+                            <constraint firstItem="3uN-Hi-dw5" firstAttribute="top" secondItem="FOS-y0-aAO" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="68w-hz-iC0"/>
+                            <constraint firstItem="dao-rL-bcM" firstAttribute="top" secondItem="5" secondAttribute="top" constant="415" id="8M5-Ja-461"/>
+                            <constraint firstItem="3uN-Hi-dw5" firstAttribute="baseline" secondItem="sqU-2v-LuA" secondAttribute="baseline" type="default" id="8VD-4Y-ikb"/>
+                            <constraint firstItem="q7b-3c-lPv" firstAttribute="centerX" secondItem="j0W-yz-GYE" secondAttribute="centerX" type="default" id="9vB-DT-fBU"/>
+                            <constraint firstItem="diD-ec-CFX" firstAttribute="centerX" secondItem="Jh2-mc-oeb" secondAttribute="centerX" type="default" id="Azx-Vq-ejB"/>
+                            <constraint firstItem="ZyW-aJ-jBk" firstAttribute="baseline" secondItem="3uN-Hi-dw5" secondAttribute="baseline" type="default" id="EfT-jT-y1z"/>
+                            <constraint firstItem="bCC-RZ-lF9" firstAttribute="centerX" secondItem="Jh2-mc-oeb" secondAttribute="centerX" type="default" id="GsW-Cy-pKS"/>
+                            <constraint firstItem="j0W-yz-GYE" firstAttribute="baseline" secondItem="QU0-8Q-Yjd" secondAttribute="baseline" type="default" id="HxN-tM-qvZ"/>
+                            <constraint firstItem="e39-Ye-Drv" firstAttribute="top" secondItem="5" secondAttribute="top" constant="13" id="IuL-RL-drM"/>
+                            <constraint firstItem="ZyW-aJ-jBk" firstAttribute="leading" secondItem="3uN-Hi-dw5" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="KEW-v0-4Ae"/>
+                            <constraint firstItem="bCC-RZ-lF9" firstAttribute="top" secondItem="Jh2-mc-oeb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="KqY-7J-i8d"/>
+                            <constraint firstItem="Xsu-3j-mZz" firstAttribute="top" secondItem="bCC-RZ-lF9" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mcy-p5-oHX"/>
+                            <constraint firstAttribute="bottom" secondItem="Edb-tL-Gob" secondAttribute="bottom" constant="416" id="O7s-Vm-RSk"/>
+                            <constraint firstItem="5np-IB-K8f" firstAttribute="centerX" secondItem="K13-0L-TAa" secondAttribute="centerX" type="default" id="OAR-Ub-jhb"/>
+                            <constraint firstItem="j0W-yz-GYE" firstAttribute="top" secondItem="q7b-3c-lPv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Qat-NG-pzG"/>
+                            <constraint firstAttribute="trailing" secondItem="e39-Ye-Drv" secondAttribute="trailing" constant="15" id="Qbb-rI-chr"/>
+                            <constraint firstItem="Jh2-mc-oeb" firstAttribute="top" secondItem="5" secondAttribute="top" constant="228" id="Qus-0L-FPf"/>
+                            <constraint firstItem="sqU-2v-LuA" firstAttribute="baseline" secondItem="j0W-yz-GYE" secondAttribute="baseline" type="default" id="R2r-3w-Cce"/>
+                            <constraint firstItem="bCC-RZ-lF9" firstAttribute="trailing" secondItem="Xsu-3j-mZz" secondAttribute="trailing" type="default" id="RUh-zo-Dnb"/>
+                            <constraint firstItem="Xsu-3j-mZz" firstAttribute="leading" secondItem="bCC-RZ-lF9" secondAttribute="leading" type="default" id="UDq-rb-csS"/>
+                            <constraint firstItem="5np-IB-K8f" firstAttribute="top" secondItem="5" secondAttribute="top" constant="83" id="Uuo-RA-LZj"/>
+                            <constraint firstItem="Edb-tL-Gob" firstAttribute="top" secondItem="SxB-mQ-aPS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WF1-a0-Uoq"/>
+                            <constraint firstItem="uk9-jh-EqY" firstAttribute="baseline" secondItem="Edb-tL-Gob" secondAttribute="baseline" type="default" id="WZ9-MN-8oJ"/>
+                            <constraint firstItem="sqU-2v-LuA" firstAttribute="top" secondItem="oyu-Fd-BBf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="a41-l9-ahw"/>
+                            <constraint firstItem="QU0-8Q-Yjd" firstAttribute="top" secondItem="dao-rL-bcM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ceb-4s-bv4"/>
+                            <constraint firstItem="K13-0L-TAa" firstAttribute="top" secondItem="5" secondAttribute="top" constant="20" symbolic="YES" type="default" id="d77-P3-rci"/>
+                            <constraint firstItem="diD-ec-CFX" firstAttribute="top" secondItem="5" secondAttribute="top" constant="151" id="dkd-j7-XZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="Gf1-Ux-lcu" secondAttribute="trailing" constant="29" id="eWj-Om-Mno"/>
+                            <constraint firstItem="FOS-y0-aAO" firstAttribute="baseline" secondItem="oyu-Fd-BBf" secondAttribute="baseline" type="default" id="eol-PK-Gvb"/>
+                            <constraint firstItem="ZyW-aJ-jBk" firstAttribute="top" secondItem="Gf1-Ux-lcu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fks-zX-T9F"/>
+                            <constraint firstItem="q7b-3c-lPv" firstAttribute="baseline" secondItem="dao-rL-bcM" secondAttribute="baseline" type="default" id="jpt-5s-B4B"/>
+                            <constraint firstItem="uk9-jh-EqY" firstAttribute="leading" secondItem="Edb-tL-Gob" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lI5-4P-CnW"/>
+                            <constraint firstItem="oyu-Fd-BBf" firstAttribute="baseline" secondItem="q7b-3c-lPv" secondAttribute="baseline" type="default" id="nxO-w3-c2q"/>
+                            <constraint firstItem="j0W-yz-GYE" firstAttribute="leading" secondItem="QU0-8Q-Yjd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="oEg-Y5-B7Z"/>
+                            <constraint firstItem="diD-ec-CFX" firstAttribute="centerX" secondItem="5np-IB-K8f" secondAttribute="centerX" type="default" id="ofl-6Q-Heh"/>
+                            <constraint firstItem="3uN-Hi-dw5" firstAttribute="leading" secondItem="sqU-2v-LuA" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ond-0G-1bu"/>
+                            <constraint firstItem="Gf1-Ux-lcu" firstAttribute="baseline" secondItem="FOS-y0-aAO" secondAttribute="baseline" type="default" id="pMt-5K-dqn"/>
+                            <constraint firstAttribute="trailing" secondItem="zTQ-mC-32G" secondAttribute="trailing" constant="264" id="plB-3C-Dl3"/>
+                            <constraint firstItem="Edb-tL-Gob" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="237" id="rAx-A0-GcH"/>
+                            <constraint firstItem="diD-ec-CFX" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="6" id="sp5-1j-DLB"/>
+                            <constraint firstItem="sqU-2v-LuA" firstAttribute="centerX" secondItem="5" secondAttribute="centerX" type="default" id="tNg-bo-l0q"/>
+                            <constraint firstAttribute="trailing" secondItem="FOS-y0-aAO" secondAttribute="trailing" constant="187" id="ujR-JW-6Km"/>
+                            <constraint firstItem="zTQ-mC-32G" firstAttribute="baseline" secondItem="SxB-mQ-aPS" secondAttribute="baseline" type="default" id="veN-4P-Ect"/>
+                            <constraint firstItem="oyu-Fd-BBf" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="355" id="zzz-Kt-32Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cardsinDeck" destination="bCC-RZ-lF9" id="94T-lE-X6X"/>
+                        <outlet property="fivesevenSeg" destination="K13-0L-TAa" id="hGX-XJ-Dt4"/>
+                        <outlet property="lbl6" destination="SxB-mQ-aPS" id="hHW-g4-Qfo"/>
+                        <outlet property="lbl7" destination="zTQ-mC-32G" id="1ZT-sQ-me9"/>
+                        <outlet property="lblcard1" destination="QU0-8Q-Yjd" id="wxJ-1j-kKm"/>
+                        <outlet property="lblcard2" destination="j0W-yz-GYE" id="jVW-CJ-IYi"/>
+                        <outlet property="lblcard3" destination="sqU-2v-LuA" id="ekX-cG-sKX"/>
+                        <outlet property="lblcard4" destination="3uN-Hi-dw5" id="hNP-cR-TMX"/>
+                        <outlet property="lblcard5" destination="ZyW-aJ-jBk" id="r7I-6A-yvg"/>
+                        <outlet property="lblcard6" destination="Edb-tL-Gob" id="gvO-zA-TsI"/>
+                        <outlet property="lblcard7" destination="uk9-jh-EqY" id="Aw0-mM-IUq"/>
+                        <outlet property="rankSeg" destination="diD-ec-CFX" id="gY5-uw-5qE"/>
+                        <outlet property="suitSeg" destination="5np-IB-K8f" id="BqF-rV-AdP"/>
+                        <outlet property="valueofHand" destination="Xsu-3j-mZz" id="iOh-aS-em4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-487" y="-183"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="dwmullanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/dwmullanViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clearButton:"/>
+                <relationship kind="action" name="fivesevenSeg:"/>
+                <relationship kind="action" name="temp:"/>
+                <relationship kind="outlet" name="cardsinDeck" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="fivesevenSeg" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="lbl6" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lbl7" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard5" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard6" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblcard7" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rankSeg" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="suitSeg" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="valueofHand" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

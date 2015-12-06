@@ -13,9 +13,6 @@
 		5AD6BC0D1985427F0093DA22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC0B1985427F0093DA22 /* InfoPlist.strings */; };
 		5AD6BC0F1985427F0093DA22 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC0E1985427F0093DA22 /* main.m */; };
 		5AD6BC13198542800093DA22 /* dwmullanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC12198542800093DA22 /* dwmullanAppDelegate.m */; };
-		5AD6BC15198542800093DA22 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC14198542800093DA22 /* Default.png */; };
-		5AD6BC17198542800093DA22 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC16198542800093DA22 /* Default@2x.png */; };
-		5AD6BC19198542800093DA22 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC18198542800093DA22 /* Default-568h@2x.png */; };
 		5AD6BC1C198542800093DA22 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC1A198542800093DA22 /* MainStoryboard.storyboard */; };
 		5AD6BC1F198542800093DA22 /* dwmullanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC1E198542800093DA22 /* dwmullanViewController.m */; };
 		5AD6BC27198542800093DA22 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD6BC26198542800093DA22 /* SenTestingKit.framework */; };
@@ -23,6 +20,8 @@
 		5AD6BC29198542800093DA22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD6BC041985427F0093DA22 /* Foundation.framework */; };
 		5AD6BC31198542800093DA22 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AD6BC2F198542800093DA22 /* InfoPlist.strings */; };
 		5AD6BC34198542800093DA22 /* pokerNewCO6025Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC33198542800093DA22 /* pokerNewCO6025Tests.m */; };
+		5AD6BC461985AA200093DA22 /* Hand.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC451985AA200093DA22 /* Hand.m */; };
+		5AD6BC491985AA370093DA22 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD6BC481985AA370093DA22 /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +45,6 @@
 		5AD6BC10198542800093DA22 /* pokerNewCO6025-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pokerNewCO6025-Prefix.pch"; sourceTree = "<group>"; };
 		5AD6BC11198542800093DA22 /* dwmullanAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dwmullanAppDelegate.h; sourceTree = "<group>"; };
 		5AD6BC12198542800093DA22 /* dwmullanAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dwmullanAppDelegate.m; sourceTree = "<group>"; };
-		5AD6BC14198542800093DA22 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		5AD6BC16198542800093DA22 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		5AD6BC18198542800093DA22 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5AD6BC1B198542800093DA22 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5AD6BC1D198542800093DA22 /* dwmullanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dwmullanViewController.h; sourceTree = "<group>"; };
 		5AD6BC1E198542800093DA22 /* dwmullanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dwmullanViewController.m; sourceTree = "<group>"; };
@@ -58,6 +54,10 @@
 		5AD6BC30198542800093DA22 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AD6BC32198542800093DA22 /* pokerNewCO6025Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pokerNewCO6025Tests.h; sourceTree = "<group>"; };
 		5AD6BC33198542800093DA22 /* pokerNewCO6025Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pokerNewCO6025Tests.m; sourceTree = "<group>"; };
+		5AD6BC441985AA200093DA22 /* Hand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hand.h; sourceTree = "<group>"; };
+		5AD6BC451985AA200093DA22 /* Hand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hand.m; sourceTree = "<group>"; };
+		5AD6BC471985AA370093DA22 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		5AD6BC481985AA370093DA22 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +122,7 @@
 				5AD6BC1A198542800093DA22 /* MainStoryboard.storyboard */,
 				5AD6BC1D198542800093DA22 /* dwmullanViewController.h */,
 				5AD6BC1E198542800093DA22 /* dwmullanViewController.m */,
+				5AD6BC3D198546F30093DA22 /* Seperate Classes */,
 				5AD6BC091985427F0093DA22 /* Supporting Files */,
 			);
 			path = pokerNewCO6025;
@@ -134,9 +135,6 @@
 				5AD6BC0B1985427F0093DA22 /* InfoPlist.strings */,
 				5AD6BC0E1985427F0093DA22 /* main.m */,
 				5AD6BC10198542800093DA22 /* pokerNewCO6025-Prefix.pch */,
-				5AD6BC14198542800093DA22 /* Default.png */,
-				5AD6BC16198542800093DA22 /* Default@2x.png */,
-				5AD6BC18198542800093DA22 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,6 +156,18 @@
 				5AD6BC2F198542800093DA22 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AD6BC3D198546F30093DA22 /* Seperate Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5AD6BC441985AA200093DA22 /* Hand.h */,
+				5AD6BC451985AA200093DA22 /* Hand.m */,
+				5AD6BC471985AA370093DA22 /* Card.h */,
+				5AD6BC481985AA370093DA22 /* Card.m */,
+			);
+			name = "Seperate Classes";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD6BC0D1985427F0093DA22 /* InfoPlist.strings in Resources */,
-				5AD6BC15198542800093DA22 /* Default.png in Resources */,
-				5AD6BC17198542800093DA22 /* Default@2x.png in Resources */,
-				5AD6BC19198542800093DA22 /* Default-568h@2x.png in Resources */,
 				5AD6BC1C198542800093DA22 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +281,8 @@
 				5AD6BC0F1985427F0093DA22 /* main.m in Sources */,
 				5AD6BC13198542800093DA22 /* dwmullanAppDelegate.m in Sources */,
 				5AD6BC1F198542800093DA22 /* dwmullanViewController.m in Sources */,
+				5AD6BC461985AA200093DA22 /* Hand.m in Sources */,
+				5AD6BC491985AA370093DA22 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +395,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pokerNewCO6025/pokerNewCO6025-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "pokerNewCO6025/pokerNewCO6025-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,7 +408,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pokerNewCO6025/pokerNewCO6025-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "pokerNewCO6025/pokerNewCO6025-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,6 +469,7 @@
 				5AD6BC39198542800093DA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AD6BC3A198542800093DA22 /* Build configuration list for PBXNativeTarget "pokerNewCO6025Tests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +478,7 @@
 				5AD6BC3C198542800093DA22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
